@@ -1,0 +1,36 @@
+{
+  "name": "react-google-news",
+  "version": "1.0.0",
+  "description": "A simple React front end using the Google News API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "start": "webpack-dev-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MitulMistry/react-google-news.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "Mitul Mistry",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MitulMistry/react-google-news/issues"
+  },
+  "homepage": "https://github.com/MitulMistry/react-google-news#readme",
+  "dependencies": {
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-react": "^6.24.1",
+    "html-webpack-plugin": "^2.30.1",
+    "webpack": "^3.7.1",
+    "webpack-dev-server": "^2.9.1"
+  }
+}
