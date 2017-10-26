@@ -1,15 +1,21 @@
 import React from 'react';
+import { Container, Row, Col } from 'reactstrap';
 import { Sidebar } from './Sidebar';
 import { MainContainer } from './MainContainer';
 
 export class Layout extends React.Component {
   render() {
     return (
-      <div>
-        <h2>Layout</h2>
-        <Sidebar />
-        <MainContainer />
-      </div>
+      <Container>
+        <Row>
+          <Col sm="3">
+            <Sidebar />
+          </Col>
+          <Col sm="9">
+            <MainContainer />
+          </Col>
+        </Row>
+      </Container>
     );
   }
 }
