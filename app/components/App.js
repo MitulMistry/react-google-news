@@ -1,11 +1,13 @@
 import React from 'react';
+import { Layout } from './Layout';
 
 export class App extends React.Component {
   render() {
     return (
-      <h1>
-        React Application
-      </h1>
+      <div>
+        <h1>React Application</h1>
+        <Layout />
+      </div>
     );
   }
 };
