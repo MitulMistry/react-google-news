@@ -1,11 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Raleway:700');
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: #ededed;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+}
+
 #container {
   padding-top: 40px;
 }
 
+#sidebar {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+}
+
+.article-text {
+  padding: 10px;
+}
+
 .article h2 {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
+}
+
+.article.card {
+  margin-bottom: 20px;
+}
+
+.article p {
+  font-size: .9rem;
+  line-height: 1.4;
 }
 
 #footer p {
+  padding-top: 20px;
   font-size: .9rem;
+  line-height: 1.4;
 }

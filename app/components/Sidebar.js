@@ -4,7 +4,7 @@ import { Nav, NavItem, NavLink } from 'reactstrap';
 export class Sidebar extends React.Component {
   render() {
     return (
-      <div>
+      <div id="sidebar">
         <h4>Google News</h4>
         <Nav vertical>
           <NavItem>

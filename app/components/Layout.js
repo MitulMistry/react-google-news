@@ -8,10 +8,10 @@ export class Layout extends React.Component {
     return (
       <Container id="container">
         <Row>
-          <Col sm="3">
+          <Col sm="auto">
             <Sidebar />
           </Col>
-          <Col sm="9">
+          <Col>
             <MainContainer />
           </Col>
         </Row>
