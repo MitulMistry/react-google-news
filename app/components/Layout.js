@@ -6,7 +6,7 @@ import { MainContainer } from './MainContainer';
 export class Layout extends React.Component {
   render() {
     return (
-      <Container>
+      <Container id="container">
         <Row>
           <Col sm="3">
             <Sidebar />

@@ -1,0 +1,11 @@
+#container {
+  padding-top: 40px;
+}
+
+.article h2 {
+  font-size: 1.3rem;
+}
+
+#footer p {
+  font-size: .9rem;
+}
