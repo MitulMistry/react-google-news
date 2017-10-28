@@ -8,42 +8,40 @@ export class ArticlesContainer extends React.Component {
     super(props);
 
     this.state = {
-      articles: []
+      loading: true,
+      articles: [1,2,3]
     };
   }
 
   componentDidMount() {
+    this.setState({ loading: true }); //necessary for method reuse?
+
     fetch('https://newsapi.org/v1/articles?source=google-news&sortBy=top&apiKey=') //needs API key
-      .then(function(response) {
+      .then(response => {
         return response.json();
-      }).then(function(json) {
-        const posts = json.articles; //array of article objects/hashes
-        this.setState({ articles });
-        console.log('parsed json', posts);
-      }).catch(function(ex) {
+      }).then(json => {
+        const articles = json.articles; //array of article objects/hashes
+        this.setState({ articles: articles, loading: false });
+        console.log('parsed json', this.state.articles);
+      }).catch(ex => {
         console.log('parsing failed', ex);
       });
   }
 
   render() {
+    if (this.state.loading) return (
+      <p>Loading...</p>
+    );
+
     return (
       <div>
-        <Row>
-        <Col>
-          <Article />
-        </Col>
-        <Col>
-          <Article />
-        </Col>
-        </Row>
-        <Row>
-        <Col>
-          <Article />
-        </Col>
-        <Col>
-          <Article />
-        </Col>
-        </Row>
+        {this.state.articles.map(article =>
+          <Article
+            urlToImage={article.urlToImage}
+            title={article.title}
+            description={article.description}
+          />
+        )}
       </div>
     );
   }
