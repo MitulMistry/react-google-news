@@ -9,7 +9,7 @@ export class ArticlesContainer extends React.Component {
 
     this.state = {
       loading: true,
-      articles: [1,2,3]
+      articles: []
     };
   }
 
@@ -37,6 +37,7 @@ export class ArticlesContainer extends React.Component {
       <div>
         {this.state.articles.map(article =>
           <Article
+            url={article.url}
             urlToImage={article.urlToImage}
             title={article.title}
             description={article.description}
