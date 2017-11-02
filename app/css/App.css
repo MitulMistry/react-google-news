@@ -9,6 +9,13 @@ h1, h2, h3, h4, h5 {
   font-weight: 700;
 }
 
+a {
+  transition: color 0.1s linear;
+  -o-transition: color 0.1s linear;
+  -moz-transition: color 0.1s linear;
+  -webkit-transition: color 0.1s linear;
+}
+
 #container {
   padding-top: 40px;
 }
@@ -67,7 +74,7 @@ h1, h2, h3, h4, h5 {
 }
 
 #footer a {
-  color: silver;
+  color: lightgray;
   text-decoration: none;
 }
 
