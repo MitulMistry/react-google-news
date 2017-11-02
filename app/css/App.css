@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Lato|Raleway:700');
 body {
   font-family: 'Lato', sans-serif;
-  /*background-color: #ededed;*/
+  background: gray url('./images/background_01.jpg') no-repeat fixed left top;
 }
 
 h1, h2, h3, h4, h5 {
@@ -16,10 +16,11 @@ h1, h2, h3, h4, h5 {
 #sidebar {
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
+  color: white;
 }
 
 .nav-item .nav-link {
-  color: black;
+  color: white;
 }
 
 .nav-item .nav-link:hover {
@@ -60,6 +61,16 @@ h1, h2, h3, h4, h5 {
 
 #footer p {
   padding-top: 20px;
+  color: white;
   font-size: .9rem;
   line-height: 1.4;
+}
+
+#footer a {
+  color: silver;
+  text-decoration: none;
+}
+
+#footer a:hover {
+  color: red;
 }
