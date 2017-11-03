@@ -16,7 +16,7 @@ export class ArticlesContainer extends React.Component {
   componentDidMount() {
     this.setState({ loading: true }); //necessary for method reuse?
 
-    fetch('https://newsapi.org/v1/articles?source=google-news&sortBy=top&apiKey=') //needs API key
+    fetch('/api/top') //needs API key
       .then(response => {
         return response.json();
       }).then(json => {

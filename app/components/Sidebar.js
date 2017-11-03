@@ -11,28 +11,34 @@ export class Sidebar extends React.Component {
             <NavLink href="#">Top Stories</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="#">World</NavLink>
+            <NavLink href="#">Ars Technica</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="#">US</NavLink>
+            <NavLink href="#">Associated Press</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="#">Business</NavLink>
+            <NavLink href="#">CNN</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="#">Technology</NavLink>
+            <NavLink href="#">ESPN</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="#">Entertainment</NavLink>
+            <NavLink href="#">Fortune</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="#">Sports</NavLink>
+            <NavLink href="#">Reuters</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="#">Science</NavLink>
+            <NavLink href="#">TechCrunch</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="#">Health</NavLink>
+            <NavLink href="#">Wall Street Journal</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink href="#">Time</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink href="#">USA Today</NavLink>
           </NavItem>
         </Nav>
       </div>
