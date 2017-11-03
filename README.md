@@ -7,5 +7,7 @@ Makes API calls with [fetch](https://github.com/github/fetch).
 Configured with [Node Package Manager](https://www.npmjs.com/), [Webpack](https://webpack.js.org/), and [Babel](https://babeljs.io/).
 
 Commands:
-```npm run build
-npm run start```
+```
+npm run build
+npm run start
+```
