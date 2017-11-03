@@ -17,47 +17,48 @@ app.get('/', function(req, res) { //request, response
 });
 
 // API ---
-const API_KEY = process.env.API_KEY; //load API key from environment
-const API_URL = 'https://newsapi.org/v1/';
+const API_KEY = '&apiKey=' + process.env.API_KEY; //load API key from environment
+const API_URL = 'https://newsapi.org/v1/articles?source=';
+const SORT_TOP = '&sortBy=top';
 
 app.get('/api/top', cors(), function(req, res) {
-  req.pipe(request(API_URL + 'articles?source=google-news&sortBy=top&apiKey=' + API_KEY)).pipe(res);
+  req.pipe(request(API_URL + 'google-news' + SORT_TOP + API_KEY)).pipe(res);
 });
 
 app.get('/api/arstechnica', cors(), function(req, res) {
-  req.pipe(request(API_URL + 'articles?source=ars-technica&sortBy=top&apiKey=' + API_KEY)).pipe(res);
+  req.pipe(request(API_URL + 'ars-technica' + SORT_TOP + API_KEY)).pipe(res);
 });
 
 app.get('/api/associatedspress', cors(), function(req, res) {
-  req.pipe(request(API_URL + 'articles?source=associated-press&sortBy=top&apiKey=' + API_KEY)).pipe(res);
+  req.pipe(request(API_URL + 'associated-press' + SORT_TOP + API_KEY)).pipe(res);
 });
 
 app.get('/api/cnn', cors(), function(req, res) {
-  req.pipe(request(API_URL + 'articles?source=cnn&sortBy=top&apiKey=' + API_KEY)).pipe(res);
+  req.pipe(request(API_URL + 'cnn' + SORT_TOP + API_KEY)).pipe(res);
 });
 
 app.get('/api/espn', cors(), function(req, res) {
-  req.pipe(request(API_URL + 'articles?source=google-news&sortBy=top&apiKey=' + API_KEY)).pipe(res);
+  req.pipe(request(API_URL + 'google-news' + SORT_TOP + API_KEY)).pipe(res);
 });
 
 app.get('/api/fortune', cors(), function(req, res) {
-  req.pipe(request(API_URL + 'articles?source=fortune&sortBy=top&apiKey=' + API_KEY)).pipe(res);
+  req.pipe(request(API_URL + 'fortune' + SORT_TOP + API_KEY)).pipe(res);
 });
 
 app.get('/api/reuters', cors(), function(req, res) {
-  req.pipe(request(API_URL + 'articles?source=reuters&sortBy=top&apiKey=' + API_KEY)).pipe(res);
+  req.pipe(request(API_URL + 'reuters' + SORT_TOP + API_KEY)).pipe(res);
 });
 
 app.get('/api/techcrunch', cors(), function(req, res) {
-  req.pipe(request(API_URL + 'articles?source=techcrunch&sortBy=top&apiKey=' + API_KEY)).pipe(res);
+  req.pipe(request(API_URL + 'techcrunch' + SORT_TOP + API_KEY)).pipe(res);
 });
 
 app.get('/api/wallstreetjournal', cors(), function(req, res) {
-  req.pipe(request(API_URL + 'articles?source=the-wall-street-journal&sortBy=top&apiKey=' + API_KEY)).pipe(res);
+  req.pipe(request(API_URL + 'the-wall-street-journal' + SORT_TOP + API_KEY)).pipe(res);
 });
 
 app.get('/api/time', cors(), function(req, res) {
-  req.pipe(request(API_URL + 'articles?source=time&sortBy=top&apiKey=' + API_KEY)).pipe(res);
+  req.pipe(request(API_URL + 'time' + SORT_TOP + API_KEY)).pipe(res);
 });
 
 app.listen(app.get('port'), function() {
