@@ -32,7 +32,7 @@ app.get('/api/arstechnica', cors(), function(req, res) {
   pipeSourceByTop(req, res, 'ars-technica');
 });
 
-app.get('/api/associatedspress', cors(), function(req, res) {
+app.get('/api/associatedpress', cors(), function(req, res) {
   pipeSourceByTop(req, res, 'associated-press');
 });
 
@@ -62,6 +62,10 @@ app.get('/api/wallstreetjournal', cors(), function(req, res) {
 
 app.get('/api/time', cors(), function(req, res) {
   pipeSourceByTop(req, res, 'time');
+});
+
+app.get('/api/usatoday', cors(), function(req, res) {
+  pipeSourceByTop(req, res, 'usa-today');
 });
 
 app.listen(app.get('port'), function() {
