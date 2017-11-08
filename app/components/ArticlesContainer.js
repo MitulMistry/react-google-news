@@ -16,7 +16,7 @@ export class ArticlesContainer extends React.Component {
   componentDidMount() {
     this.setState({ loading: true }); //necessary for method reuse?
 
-    fetch('/api/top') //needs API key
+    fetch('/api/top') //requests API from back end (server.js)
       .then(response => {
         return response.json();
       }).then(json => {

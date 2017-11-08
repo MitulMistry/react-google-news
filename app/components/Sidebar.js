@@ -1,5 +1,6 @@
 import React from 'react';
 import { Nav, NavItem, NavLink } from 'reactstrap';
+import { Link } from 'react-router-dom';
 
 export class Sidebar extends React.Component {
   render() {
@@ -8,37 +9,37 @@ export class Sidebar extends React.Component {
         <h4>Google News</h4>
         <Nav vertical>
           <NavItem>
-            <NavLink href="#">Top Stories</NavLink>
+            <Link to="/top" className="nav-link">Top Stories</Link>
           </NavItem>
           <NavItem>
-            <NavLink href="#">Ars Technica</NavLink>
+            <Link to="/arstechnica" className="nav-link">Ars Technica</Link>
           </NavItem>
           <NavItem>
-            <NavLink href="#">Associated Press</NavLink>
+            <Link to="/associatedpress" className="nav-link">Associated Press</Link>
           </NavItem>
           <NavItem>
-            <NavLink href="#">CNN</NavLink>
+            <Link to="/cnn" className="nav-link">CNN</Link>
           </NavItem>
           <NavItem>
-            <NavLink href="#">ESPN</NavLink>
+            <Link to="/espn" className="nav-link">ESPN</Link>
           </NavItem>
           <NavItem>
-            <NavLink href="#">Fortune</NavLink>
+            <Link to="/fortune" className="nav-link">Fortune</Link>
           </NavItem>
           <NavItem>
-            <NavLink href="#">Reuters</NavLink>
+            <Link to="/reuters" className="nav-link">Reuters</Link>
           </NavItem>
           <NavItem>
-            <NavLink href="#">TechCrunch</NavLink>
+            <Link to="/techcrunch" className="nav-link">TechCrunch</Link>
           </NavItem>
           <NavItem>
-            <NavLink href="#">Wall Street Journal</NavLink>
+            <Link to="/wallstreetjournal" className="nav-link">Wall Street Journal</Link>
           </NavItem>
           <NavItem>
-            <NavLink href="#">Time</NavLink>
+            <Link to="/time" className="nav-link">Time</Link>
           </NavItem>
           <NavItem>
-            <NavLink href="#">USA Today</NavLink>
+            <Link to="/usatoday" className="nav-link">USA Today</Link>
           </NavItem>
         </Nav>
       </div>
