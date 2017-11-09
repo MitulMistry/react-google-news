@@ -1,6 +1,7 @@
 import React from 'react';
 import { Nav, NavItem } from 'reactstrap';
 import { NavLink } from 'react-router-dom'; //NavLink for active styling, Link for without
+import { SidebarNavLink } from './SidebarNavLink';
 
 export class Sidebar extends React.Component {
   render() {
@@ -8,39 +9,17 @@ export class Sidebar extends React.Component {
       <div id="sidebar">
         <h4>Google News</h4>
         <Nav vertical>
-          <NavItem>
-            <NavLink to="/top" className="nav-link" activeClassName="active">Top Stories</NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink to="/arstechnica" className="nav-link" activeClassName="active">Ars Technica</NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink to="/associatedpress" className="nav-link" activeClassName="active">Associated Press</NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink to="/cnn" className="nav-link" activeClassName="active">CNN</NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink to="/espn" className="nav-link" activeClassName="active">ESPN</NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink to="/fortune" className="nav-link" activeClassName="active">Fortune</NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink to="/reuters" className="nav-link" activeClassName="active">Reuters</NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink to="/techcrunch" className="nav-link" activeClassName="active">TechCrunch</NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink to="/wallstreetjournal" className="nav-link" activeClassName="active">Wall Street Journal</NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink to="/time" className="nav-link" activeClassName="active">Time</NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink to="/usatoday" className="nav-link" activeClassName="active">USA Today</NavLink>
-          </NavItem>
+          <SidebarNavLink to="/top">Top Stories</SidebarNavLink>
+          <SidebarNavLink to="/arstechnica">Ars Technica</SidebarNavLink>
+          <SidebarNavLink to="/associatedpress">Associated Press</SidebarNavLink>
+          <SidebarNavLink to="/cnn">CNN</SidebarNavLink>
+          <SidebarNavLink to="/espn">ESPN</SidebarNavLink>
+          <SidebarNavLink to="/fortune">Fortune</SidebarNavLink>
+          <SidebarNavLink to="/reuters">Reuters</SidebarNavLink>
+          <SidebarNavLink to="/techcrunch">TechCrunch</SidebarNavLink>
+          <SidebarNavLink to="/wallstreetjournal">Wall Street Journal</SidebarNavLink>
+          <SidebarNavLink to="/time">Time</SidebarNavLink>
+          <SidebarNavLink to="/usatoday">USA Today</SidebarNavLink>
         </Nav>
       </div>
     );
