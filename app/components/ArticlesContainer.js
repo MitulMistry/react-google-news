@@ -1,6 +1,6 @@
 import React from 'react';
 import 'whatwg-fetch'; //use fetch for API call
-import { Container, Row, Col } from 'reactstrap';
+import { Container, Row, Col, CardColumns } from 'reactstrap';
 import { Article } from './Article';
 
 export class ArticlesContainer extends React.Component {
@@ -53,7 +53,7 @@ export class ArticlesContainer extends React.Component {
     );
 
     return (
-      <div>
+      <CardColumns>
         {this.state.articles.map(article =>
           <Article
             url={article.url}
@@ -62,7 +62,7 @@ export class ArticlesContainer extends React.Component {
             description={article.description}
           />
         )}
-      </div>
+      </CardColumns>
     );
   }
 }

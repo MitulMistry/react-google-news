@@ -38,11 +38,11 @@ a {
   color: red;
 }
 
-.article-text {
-  padding: 10px;
+.article .card-body {
+  padding: 10px 15px;
 }
 
-.article h2 {
+.article .card-title {
   font-size: 1.2rem;
 }
 
@@ -64,10 +64,6 @@ a {
 
 .article a:hover {
   color: red;
-}
-
-.article-image {
-  object-fit: cover; /* Set article image to be cropped without distortion */
 }
 
 #footer p {
