@@ -8,7 +8,8 @@
     "webpack-build": "webpack",
     "webpack-start": "webpack-dev-server",
     "start": "node server.js",
-    "dev": "webpack && npm start"
+    "dev": "webpack && npm start",
+    "heroku-postbuild": "webpack -p --config ./webpack.prod.config.js --progress"
   },
   "repository": {
     "type": "git",
@@ -46,5 +47,8 @@
     "url-loader": "^0.6.2",
     "webpack": "^3.8.1",
     "webpack-dev-server": "^2.9.3"
+  },
+  "engines": {
+    "node": "8.9.1"
   }
 }
