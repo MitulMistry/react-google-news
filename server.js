@@ -13,7 +13,7 @@ if (process.env.NODE_ENV !== 'production') {
 app.set('port', (process.env.PORT || 5000)); //gets port from environment or else defaults to 5000
 
 // app.use(cors()); //enable all CORS requests
-app.use(express.static(__dirname + '/build')); //read files from the build folder
+app.use(express.static(__dirname + '/dist')); //read files from this folder
 
 app.get('/', function(req, res) { //request, response
   res.render('index.html');

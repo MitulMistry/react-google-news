@@ -1,12 +1,11 @@
-var HTMLWebpackPlugin = require('html-webpack-plugin');
-var HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
-  template: __dirname + '/app/index.html',
-  filename: 'index.html',
-  inject: 'body'
-});
+const path = require('path');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: ['whatwg-fetch', __dirname + '/app/index.js'],
+  entry: {
+    app: './app/index.js'
+  },
   module: {
     loaders: [
       {
@@ -32,9 +31,16 @@ module.exports = {
       },
     ]
   },
+  plugins: [
+    new CleanWebpackPlugin(['dist']),
+    new HtmlWebpackPlugin({
+      template: __dirname + '/app/index.html',
+      filename: 'index.html',
+      inject: 'body'
+    })
+  ],
   output: {
-    filename: 'transformed.js',
-    path: __dirname + '/build'
-  },
-  plugins: [HTMLWebpackPluginConfig]
+    filename: '[name].bundle.js',
+    path: path.resolve(__dirname, 'dist')
+  }
 };
