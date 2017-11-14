@@ -6,8 +6,20 @@ var newsQuery = require('./lib/newsQuery.js'); //helper functions for generating
 
 var app = express();
 
-if (process.env.NODE_ENV !== 'production') {
+if (process.env.NODE_ENV !== 'production') { //check for development environment
   require('dotenv').load(); //use dotenv file for local API key storage
+
+  var webpack = require('webpack');
+  var webpackDevMiddleware = require('webpack-dev-middleware');
+  var webpackHotMiddleware = require('webpack-hot-middleware');
+  var config = require('./webpack.dev.js');
+  var compiler = webpack(config);
+
+  app.use(webpackHotMiddleware(compiler));
+  app.use(webpackDevMiddleware(compiler, {
+    noInfo: true,
+    publicPath: config.output.publicPath
+  }));
 }
 
 app.set('port', (process.env.PORT || 5000)); //gets port from environment or else defaults to 5000
