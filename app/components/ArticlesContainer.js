@@ -54,8 +54,9 @@ export class ArticlesContainer extends React.Component {
 
     return (
       <CardColumns>
-        {this.state.articles.map(article =>
+        {this.state.articles.map((article, i) =>
           <Article
+            key={i}
             url={article.url}
             urlToImage={article.urlToImage}
             title={article.title}
