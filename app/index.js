@@ -1,5 +1,6 @@
-import 'bootstrap/dist/css/bootstrap.css'; //for Webpack
-import './css/App.css';
+// import 'bootstrap/dist/css/bootstrap.css'; //for Webpack
+import 'bootstrap/scss/bootstrap.scss';
+import './scss/App.scss';
 import bgImg from './images/background_01.jpg';
 
 import React from 'react';
