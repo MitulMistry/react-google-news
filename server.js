@@ -80,6 +80,10 @@ app.get('/api/usatoday', cors(), function(req, res) {
   pipeSourceByTop(req, res, 'usa-today');
 });
 
+app.get('*', function (req, res) { // This wildcard method (catch-all) handles all other requests - keep on bottom
+  res.redirect('/');
+});
+
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
 });
