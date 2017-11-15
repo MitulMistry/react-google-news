@@ -5553,7 +5553,8 @@ a.text-dark:focus, a.text-dark:hover {
   visibility: hidden !important; }
 body {
   font-family: 'Lato', sans-serif;
-  background: gray url("./images/background_01.jpg") no-repeat fixed left top; }
+  background: gray url("./images/background_01.jpg") no-repeat fixed left top;
+  background-size: cover; }
 
 h1, h2, h3, h4, h5 {
   font-family: 'Raleway', sans-serif;
@@ -5617,4 +5618,4 @@ a {
 #footer a:hover {
   color: red; }
 
-/*# sourceMappingURL=app.0c4022c8b415496ad5e15be05e8ff7eb.css.map*/
+/*# sourceMappingURL=app.df4913927d697afd8d3c3d85bb807042.css.map*/
