@@ -7,7 +7,7 @@ module.exports = {
     app: './app/index.js'
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.js$/,
         exclude: /node_modules/,
@@ -27,8 +27,8 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loader: "style-loader!css-loader?url=false"
-      },
+        loader: 'style-loader!css-loader?url=false'
+      }
     ]
   },
   plugins: [
