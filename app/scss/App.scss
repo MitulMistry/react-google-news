@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Lato|Raleway:700');
+
+$highlight-color: orange;
+
 body {
   font-family: 'Lato', sans-serif;
   background: gray url('./images/background_01.jpg') no-repeat fixed left top;
@@ -27,58 +30,62 @@ a {
   color: white;
 }
 
-.nav-item .nav-link {
-  color: white;
+.nav-item {
+  .nav-link {
+    color: white;
+  }
+
+  .nav-link:hover {
+    color: $highlight-color;
+  }
+
+  .active {
+    color: $highlight-color;
+  }
 }
 
-.nav-item .nav-link:hover {
-  color: red;
-}
-
-.nav-item .active {
-  color: red;
-}
-
-.article .card-body {
-  padding: 10px 15px;
-}
-
-.article .card-title {
-  font-size: 1.2rem;
-}
-
-.article.card {
+.article {
   margin-bottom: 20px;
   border-color: black;
-  border-radius: 0;
+  // border-radius: 0;
+
+  .card-body {
+    padding: 10px 15px;
+  }
+
+  .card-title {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: .9rem;
+    line-height: 1.4;
+  }
+
+  a {
+    color: black;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: $highlight-color;
+  }
 }
 
-.article p {
-  font-size: .9rem;
-  line-height: 1.4;
-}
+#footer {
+  p {
+    padding-top: 20px;
+    color: white;
+    font-size: .9rem;
+    line-height: 1.4;
+  }
 
-.article a {
-  color: black;
-  text-decoration: none;
-}
+  a {
+    color: lightgray;
+    text-decoration: none;
+  }
 
-.article a:hover {
-  color: red;
-}
-
-#footer p {
-  padding-top: 20px;
-  color: white;
-  font-size: .9rem;
-  line-height: 1.4;
-}
-
-#footer a {
-  color: lightgray;
-  text-decoration: none;
-}
-
-#footer a:hover {
-  color: red;
+  a:hover {
+    color: $highlight-color;
+  }
 }
