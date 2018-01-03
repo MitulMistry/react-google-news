@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import 'whatwg-fetch'; //use fetch for API call
 import { Container, Row, Col, CardColumns } from 'reactstrap';
 import { Article } from './Article';
@@ -67,3 +68,7 @@ export class ArticlesContainer extends React.Component {
     );
   }
 }
+
+ArticlesContainer.propTypes = {
+  location: PropTypes.object.isRequired //from React Router
+};

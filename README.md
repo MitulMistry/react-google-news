@@ -29,7 +29,7 @@ Node Package Manager (NPM) is used for dependencies. To install the application 
 
 1. Install [Node.js](https://nodejs.org/). NPM comes packaged with it.
 2. Run `npm install` in the command line while in the project directory. It will install dependencies from the [package.json file](../master/package.json).
-3. To build for development and run the local dev server at http://localhost:5000, run `npm run webpack-start`. It will run the Node/Express application in the [server.js file](../master/server.js).
+3. To build for development and run the local dev server at http://localhost:5000, run `npm run dev`. It will run the Node/Express application in the [server.js file](../master/server.js).
 
 ## License
 This project is open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).

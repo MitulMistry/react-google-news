@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Container, Row, Col, Card, CardImg, CardText, CardBody,
   CardTitle, CardSubtitle } from 'reactstrap';
 
@@ -15,3 +16,10 @@ export class Article extends React.Component {
     );
   }
 }
+
+Article.propTypes = {
+  url: PropTypes.string,
+  urlToImage: PropTypes.string,
+  title: PropTypes.string,
+  description: PropTypes.string
+};
