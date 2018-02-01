@@ -1,6 +1,8 @@
 # React Google News
 A simple [React](https://reactjs.org/) front end application using the [Google News API](https://newsapi.org/).
 
+![screenshot](readme_react_google_news.jpg)
+
 ## Demo App
 Sample application deployed on Heroku: https://react-google-news.herokuapp.com
 
