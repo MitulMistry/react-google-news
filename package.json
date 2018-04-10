@@ -8,7 +8,8 @@
     "build": "webpack --config webpack.prod.js",
     "webpack-start": "webpack-dev-server --open --config webpack.dev.js",
     "start": "node server.js",
-    "dev": "webpack --config webpack.dev.js && npm run start"
+    "dev": "webpack --config webpack.dev.js && npm run start",
+    "postinstall": "webpack --config webpack.prod.js"
   },
   "repository": {
     "type": "git",
