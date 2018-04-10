@@ -5,10 +5,10 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "webpack-build": "webpack --config webpack.prod.js",
+    "build": "webpack --config webpack.prod.js",
     "webpack-start": "webpack-dev-server --open --config webpack.dev.js",
     "start": "node server.js",
-    "dev": "webpack --config webpack.dev.js && npm start"
+    "dev": "webpack --config webpack.dev.js && npm run start"
   },
   "repository": {
     "type": "git",

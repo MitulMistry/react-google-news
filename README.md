@@ -18,9 +18,7 @@ Makes front end API calls with [fetch](https://github.com/github/fetch).
 
 ## Commands
 
-`npm run webpack-build` - Use Webpack to build for production.
-
-`npm run webpack-start` - Run Webpack dev server.
+`npm run build` - Use Webpack to build for production.
 
 `npm run start` - Run the Express server via Node.
 
