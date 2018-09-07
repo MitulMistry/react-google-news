@@ -30,6 +30,7 @@
     "express": "^4.16.3",
     "react": "^16.3.1",
     "react-dom": "^16.3.1",
+    "react-lazyload-fadein": "^1.1.0",
     "react-router-dom": "^4.2.2",
     "reactstrap": "^5.0.0",
     "request": "^2.85.0",
