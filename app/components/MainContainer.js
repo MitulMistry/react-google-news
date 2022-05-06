@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import { ArticlesContainer } from './ArticlesContainer';
 import { Footer } from './Footer';
 
@@ -7,19 +7,41 @@ export class MainContainer extends React.Component {
   render() {
     return (
       <div>
-        <Switch>
-          <Route path='/' component={ArticlesContainer} />
-          <Route path='/arstechnica' component={ArticlesContainer} />
-          <Route path='/associatedpress' component={ArticlesContainer} />
-          <Route path='/cnn' component={ArticlesContainer} />
-          <Route path='/espn' component={ArticlesContainer} />
-          <Route path='/fortune' component={ArticlesContainer} />
-          <Route path='/reuters' component={ArticlesContainer} />
-          <Route path='/techcrunch' component={ArticlesContainer} />
-          <Route path='/wallstreetjournal' component={ArticlesContainer} />
-          <Route path='/time' component={ArticlesContainer} />
-          <Route path='/usatoday' component={ArticlesContainer} />
-        </Switch>
+        <Routes>
+          <Route path='/' element={
+            <ArticlesContainer pathName='/' />
+          } />
+          <Route path='arstechnica' element={
+            <ArticlesContainer pathName='arstechnica' />
+          } />
+          <Route path='associatedpress' element={
+            <ArticlesContainer pathName='associatedpress' />
+          } />
+          <Route path='cnn' element={
+            <ArticlesContainer pathName='cnn' />
+          } />
+          <Route path='espn' element={
+            <ArticlesContainer pathName='espn' />
+          } />
+          <Route path='fortune' element={
+            <ArticlesContainer pathName='fortune' />
+          } />
+          <Route path='reuters' element={
+            <ArticlesContainer pathName='reuters' />
+          } />
+          <Route path='techcrunch' element={
+            <ArticlesContainer pathName='techcrunch' />
+          } />
+          <Route path='wallstreetjournal' element={
+            <ArticlesContainer pathName='wallstreetjournal' />
+          } />
+          <Route path='time' element={
+            <ArticlesContainer pathName='time' />
+          } />
+          <Route path='usatoday' element={
+            <ArticlesContainer pathName='usatoday' />
+          } />
+        </Routes>
         <Footer />
       </div>
     );

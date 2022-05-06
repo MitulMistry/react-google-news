@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import 'whatwg-fetch'; //use fetch for API call
 import { Container, Row, Col, CardColumns } from 'reactstrap';
 import { Article } from './Article';
+import { useLocation } from 'react-router-dom';
 
 export class ArticlesContainer extends React.Component {
   constructor(props) {
@@ -10,26 +11,30 @@ export class ArticlesContainer extends React.Component {
 
     this.state = {
       loading: true,
+      pathName: '',
       articles: []
     };
   }
 
   componentDidMount() {
-    var apiRoute = this.getApiRoute(this.props.location.pathname);
+    var route = this.props.pathName; //get the incoming route
+
+    this.setState({ pathName: route });
+    var apiRoute = this.getApiRoute(route);
     this.getArticles(apiRoute); //get articles for first time being mounted
   }
 
   componentWillReceiveProps(nextProps) {
-    var route = nextProps.location.pathname; //get the incoming route (From React Router)
+    var route = nextProps.pathName; //get the incoming route
 
-    if (route !== this.props.location.pathname) { //compare incoming route to previous route
+    if (route !== this.state.pathName) { //compare incoming route to previous route
       var apiRoute = this.getApiRoute(route);
       this.getArticles(apiRoute);
     }
   }
 
   getApiRoute(route) {
-    var apiRoute = (route === '/') ? '/api/top' : '/api' + route; //default route should make API call to api/top, otherwise use route name for API route (e.g. "espn" becomes ""/api/espn")
+    var apiRoute = (route === '/') ? '/api/top' : '/api/' + route; //default route should make API call to api/top, otherwise use route name for API route (e.g. "espn" becomes ""/api/espn")
     return apiRoute;
   }
 
@@ -70,5 +75,5 @@ export class ArticlesContainer extends React.Component {
 }
 
 ArticlesContainer.propTypes = {
-  location: PropTypes.object.isRequired //from React Router
+  pathName: PropTypes.string.isRequired
 };
