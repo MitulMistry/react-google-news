@@ -1,4 +1,4 @@
-const merge = require('webpack-merge');
+const { merge } = require('webpack-merge');
 const common = require('./webpack.common.js');
 
 module.exports = merge(common, {
@@ -13,7 +13,10 @@ module.exports = merge(common, {
       use: [{
         loader: 'style-loader' // creates style nodes from JS strings
       }, {
-        loader: 'css-loader?url=false' // translates CSS into CommonJS
+        loader: 'css-loader', // translates CSS into CommonJS
+        options: {
+          url: false
+        }
       }, {
         loader: 'sass-loader' // compiles Sass to CSS
       }]
