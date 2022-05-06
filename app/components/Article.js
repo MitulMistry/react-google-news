@@ -1,22 +1,41 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { motion } from 'framer-motion';
 import { Container, Row, Col, Card, CardImg, CardText, CardBody,
   CardTitle, CardSubtitle } from 'reactstrap';
 
 export class Article extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      iamgeLoaded: false
+    };
+
+    this.setImageLoaded = this.setImageLoaded.bind(this);
+  }
+
+  setImageLoaded() {
+    this.setState({imageLoaded: true});
+  }
+
   render() {
     return (
-      
-        
-          <Card className="article">
-            <a href={this.props.url} target="_blank"><CardImg top width="100%" src={this.props.urlToImage} onLoad={onload} alt="Article image" /></a>
-            <CardBody>
-              <CardTitle><a href={this.props.url} target="_blank">{this.props.title}</a></CardTitle>
-              <CardText>{this.props.description}</CardText>
-            </CardBody>
-          </Card>
-        
-      
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: this.state.imageLoaded ? 1 : 0 }}
+        transition={{ duration: 0.75 }}
+        className ="article-motion-div"
+      >
+        <Card className="article">
+          <a href={this.props.url} target="_blank">
+            <CardImg top width="100%" src={this.props.urlToImage} onLoad={this.setImageLoaded} alt="Article image" />
+          </a>
+          <CardBody>
+            <CardTitle><a href={this.props.url} target="_blank">{this.props.title}</a></CardTitle>
+            <CardText>{this.props.description}</CardText>
+          </CardBody>
+        </Card>
+      </motion.div>
     );
   }
 }
