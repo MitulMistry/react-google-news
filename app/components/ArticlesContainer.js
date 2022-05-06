@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import 'whatwg-fetch'; //use fetch for API call
-import { Container, Row, Col, CardColumns } from 'reactstrap';
+import Masonry from 'react-masonry-css'
+import { Container, Row, Col } from 'reactstrap';
 import { Article } from './Article';
 import { useLocation } from 'react-router-dom';
 
@@ -58,8 +59,19 @@ export class ArticlesContainer extends React.Component {
       <p>Loading...</p>
     );
 
+    const breakpointColumnsObj = {
+      default: 3,
+      992: 2,
+      576: 1
+    };
+
     return (
-      <CardColumns>
+      <Row>
+      <Masonry
+        breakpointCols={breakpointColumnsObj}
+        className="article-masonry-grid"
+        columnClassName="article-masonry-grid_column"
+      >
         {this.state.articles.map((article, i) =>
           <Article
             key={i}
@@ -69,7 +81,8 @@ export class ArticlesContainer extends React.Component {
             description={article.description}
           />
         )}
-      </CardColumns>
+      </Masonry>
+      </Row>
     );
   }
 }

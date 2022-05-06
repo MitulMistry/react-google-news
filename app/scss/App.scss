@@ -29,6 +29,10 @@ a {
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   color: white;
+
+  @include media-breakpoint-down(md) {
+    margin-bottom: 20px;
+  }
 }
 
 .nav-item {
@@ -45,10 +49,67 @@ a {
   }
 }
 
+.article-masonry-grid {
+  display: -webkit-box; /* Not needed if autoprefixing */
+  display: -ms-flexbox; /* Not needed if autoprefixing */
+  display: flex;
+  margin-left: -20px; /* gutter size offset */
+  width: auto;
+
+  @include media-breakpoint-up(xxl) {
+    margin-left: -30px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin-left: 0px;
+  }
+}
+
+.article-masonry-grid_column {
+  padding-left: 20px; /* gutter size */
+  background-clip: padding-box;
+
+  @include media-breakpoint-up(xxl) {
+    padding-left: 30px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding-left: 0px;
+  }
+}
+
+// .card-columns {
+//   @include media-breakpoint-up(xs) {
+//     column-count: 1;
+//   }
+
+//   @include media-breakpoint-up(md) {
+//     column-count: 2;
+//   }
+
+//   @include media-breakpoint-up(lg) {
+//     column-count: 3;
+//   }
+// }
+
+/* Style your items */
+// .article-masonry-grid_column > div { /* change div to reference your elements you put in <Masonry> */
+//   background: grey;
+//   margin-bottom: 30px;
+// }
+
 .article {
   margin-bottom: 20px;
   border-color: black;
   // border-radius: 0;
+
+  @include media-breakpoint-up(xxl) {
+    margin-bottom: 30px;
+  }
+
+  // @include media-breakpoint-down(sm) {
+  //   margin-bottom: 15px;
+  // }
 
   .card-body {
     padding: 10px 15px;
@@ -56,6 +117,9 @@ a {
 
   .card-title {
     font-size: 1.2rem;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
   }
 
   p {
@@ -73,19 +137,19 @@ a {
   }
 }
 
-.card-columns {
-  @include media-breakpoint-up(xs) {
-    column-count: 1;
-  }
+// .card-columns {
+//   @include media-breakpoint-up(xs) {
+//     column-count: 1;
+//   }
 
-  @include media-breakpoint-up(md) {
-    column-count: 2;
-  }
+//   @include media-breakpoint-up(md) {
+//     column-count: 2;
+//   }
 
-  @include media-breakpoint-up(lg) {
-    column-count: 3;
-  }
-}
+//   @include media-breakpoint-up(lg) {
+//     column-count: 3;
+//   }
+// }
 
 #footer {
   p {
