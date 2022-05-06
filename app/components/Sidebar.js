@@ -9,7 +9,7 @@ export class Sidebar extends React.Component {
       <div id="sidebar">
         <h4>Google News</h4>
         <Nav vertical>
-          <SidebarNavLink to="/top">Top Stories</SidebarNavLink>
+          <SidebarNavLink to="/">Top Stories</SidebarNavLink>
           <SidebarNavLink to="/arstechnica">Ars Technica</SidebarNavLink>
           <SidebarNavLink to="/associatedpress">Associated Press</SidebarNavLink>
           <SidebarNavLink to="/cnn">CNN</SidebarNavLink>

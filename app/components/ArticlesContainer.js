@@ -29,6 +29,7 @@ export class ArticlesContainer extends React.Component {
     var route = nextProps.pathName; //get the incoming route
 
     if (route !== this.state.pathName) { //compare incoming route to previous route
+      this.setState({ pathName: route });
       var apiRoute = this.getApiRoute(route);
       this.getArticles(apiRoute);
     }
