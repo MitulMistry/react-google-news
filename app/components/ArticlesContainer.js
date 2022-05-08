@@ -12,7 +12,6 @@ export class ArticlesContainer extends React.Component {
 
     this.state = {
       loading: true,
-      pathName: '',
       articles: []
     };
   }
@@ -20,16 +19,14 @@ export class ArticlesContainer extends React.Component {
   componentDidMount() {
     var route = this.props.pathName; //get the incoming route
 
-    this.setState({ pathName: route });
     var apiRoute = this.getApiRoute(route);
     this.getArticles(apiRoute); //get articles for first time being mounted
   }
 
-  componentWillReceiveProps(nextProps) {
-    var route = nextProps.pathName; //get the incoming route
+  componentDidUpdate(prevProps) {
+    var route = this.props.pathName; //get the incoming route
 
-    if (route !== this.state.pathName) { //compare incoming route to previous route
-      this.setState({ pathName: route });
+    if (route !== prevProps.pathName) { //compare incoming route to previous route
       var apiRoute = this.getApiRoute(route);
       this.getArticles(apiRoute);
     }
