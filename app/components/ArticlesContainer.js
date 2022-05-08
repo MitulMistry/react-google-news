@@ -1,10 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import 'whatwg-fetch'; //use fetch for API call
+import 'whatwg-fetch'; // Use fetch for API calls
 import Masonry from 'react-masonry-css'
-import { Container, Row, Col } from 'reactstrap';
+import { Row } from 'reactstrap';
 import { Article } from './Article';
-import { useLocation } from 'react-router-dom';
 
 export class ArticlesContainer extends React.Component {
   constructor(props) {
@@ -17,34 +16,44 @@ export class ArticlesContainer extends React.Component {
   }
 
   componentDidMount() {
-    var route = this.props.pathName; //get the incoming route
+    // Get the incoming route
+    const route = this.props.pathName;
 
-    var apiRoute = this.getApiRoute(route);
-    this.getArticles(apiRoute); //get articles for first time being mounted
+    // Get articles for first time being mounted
+    const apiRoute = this.getApiRoute(route);
+    this.getArticles(apiRoute);
   }
 
   componentDidUpdate(prevProps) {
-    var route = this.props.pathName; //get the incoming route
+    // Get the incoming route
+    const route = this.props.pathName;
 
-    if (route !== prevProps.pathName) { //compare incoming route to previous route
-      var apiRoute = this.getApiRoute(route);
+    // Compare incoming route to previous route.
+    // Only make API call if new route is different.
+    if (route !== prevProps.pathName) {
+      const apiRoute = this.getApiRoute(route);
       this.getArticles(apiRoute);
     }
   }
 
+  // Helper method to format correct backened query for API
   getApiRoute(route) {
-    var apiRoute = (route === '/') ? '/api/top' : '/api/' + route; //default route should make API call to api/top, otherwise use route name for API route (e.g. "espn" becomes ""/api/espn")
+    // Default route should make API call to api/top, otherwise use route name
+    // for API route (e.g. "espn" becomes ""/api/espn")
+    const apiRoute = (route === '/') ? '/api/top' : '/api/' + route;
     return apiRoute;
   }
 
   getArticles(route) {
-    this.setState({ loading: true }); //necessary for method reuse
+    // Necessary to set loading state for method reuse
+    this.setState({ loading: true });
 
-    fetch(route) //requests API from back end (server.js)
+    // Requests API from back end (server.js)
+    fetch(route)
       .then(response => {
         return response.json();
       }).then(json => {
-        const articles = json.articles; //array of article objects/hashes
+        const articles = json.articles; // Array of article objects/hashes
         this.setState({ articles: articles, loading: false });
         console.log('parsed json', this.state.articles);
       }).catch(ex => {
@@ -57,6 +66,7 @@ export class ArticlesContainer extends React.Component {
       <p>Loading...</p>
     );
 
+    // Configure breakpoints for Masonry grid of columns
     const breakpointColumnsObj = {
       default: 3,
       992: 2,
@@ -65,21 +75,21 @@ export class ArticlesContainer extends React.Component {
 
     return (
       <Row>
-      <Masonry
-        breakpointCols={breakpointColumnsObj}
-        className="article-masonry-grid"
-        columnClassName="article-masonry-grid_column"
-      >
-        {this.state.articles.map((article, i) =>
-          <Article
-            key={i}
-            url={article.url}
-            urlToImage={article.urlToImage}
-            title={article.title}
-            description={article.description}
-          />
-        )}
-      </Masonry>
+        <Masonry
+          breakpointCols={breakpointColumnsObj}
+          className="article-masonry-grid"
+          columnClassName="article-masonry-grid_column"
+        >
+          {this.state.articles.map((article, i) =>
+            <Article
+              key={`article-${i}`}
+              url={article.url}
+              urlToImage={article.urlToImage}
+              title={article.title}
+              description={article.description}
+            />
+          )}
+        </Masonry>
       </Row>
     );
   }

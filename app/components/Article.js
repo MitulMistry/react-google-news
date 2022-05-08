@@ -1,14 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
-import { Container, Row, Col, Card, CardImg, CardText, CardBody,
+import { Card, CardImg, CardText, CardBody,
   CardTitle, CardSubtitle } from 'reactstrap';
 
 export class Article extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      iamgeLoaded: false
+      imageLoaded: false
     };
 
     this.setImageLoaded = this.setImageLoaded.bind(this);
