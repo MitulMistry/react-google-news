@@ -77,12 +77,20 @@ a {
 
   @include media-breakpoint-down(md) {
     margin-bottom: 20px;
+
+    ul.flex-column {
+      flex-direction: row !important;
+    }
   }
 }
 
 .nav-item {
   .nav-link {
     color: white;
+
+    @include media-breakpoint-down(md) {
+      padding: .5rem 2rem .5rem 0;
+    }
   }
 
   .nav-link:hover {
