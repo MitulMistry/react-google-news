@@ -55,7 +55,7 @@ export class ArticlesContainer extends React.Component {
       }).then(json => {
         const articles = json.articles; // Array of article objects/hashes
         this.setState({ articles: articles, loading: false });
-        console.log('parsed json', this.state.articles);
+        // console.log('parsed json', articles);
       }).catch(ex => {
         console.log('parsing failed', ex);
       });

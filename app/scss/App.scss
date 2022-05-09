@@ -131,8 +131,14 @@ a {
 
 .article {
   margin-bottom: 20px;
-  border-color: black;
-  // border-radius: 0;
+  // border-color: black;
+  border: none;
+  border-radius: 0.75rem;
+
+  // box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  -webkit-box-shadow: 1px 1px 2px 1px rgba(0,0,0,0.16), 2px 2px 6px 2px rgba(0,0,0,0.16);
+  -moz-box-shadow: 1px 1px 2px 1px rgba(0,0,0,0.16), 2px 2px 6px 2px rgba(0,0,0,0.16);
+  box-shadow: 1px 1px 2px 1px rgba(0,0,0,0.16), 2px 2px 6px 2px rgba(0,0,0,0.16);
 
   @include media-breakpoint-up(xxl) {
     margin-bottom: 30px;
@@ -142,15 +148,20 @@ a {
   //   margin-bottom: 15px;
   // }
 
+  img {
+    border-top-left-radius: 0.75rem;
+    border-top-right-radius: 0.75rem;
+  }
+
   .card-body {
-    padding: 10px 15px;
+    padding: 15px 20px 25px 20px;
   }
 
   .card-title {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
-    line-height: 1.2;
+    line-height: 1.3;
   }
 
   p {
