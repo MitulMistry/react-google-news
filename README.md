@@ -5,7 +5,7 @@
 React Google News uses a lightweight Node Express back end to reroute API queries to a React front end. It displays trending articles in a responsive card grid format and allows the user to select from several popular news websites.
 
 ## Demo App
-You can see a demo version of this application deployed to Heroku here: https://react-google-news.herokuapp.com
+You can see a demo version of this application deployed to [Cyclic](https://app.cyclic.sh) here: https://react-google-news.cyclic.app
 
 ## Application Info
 The project is configured with [Node Package Manager](https://www.npmjs.com/), [Webpack](https://webpack.js.org/), and [Babel](https://babeljs.io/).
@@ -17,12 +17,11 @@ An Express back end is used to make API requests and protect the API key. Routes
 The application implements Bootstrap via [Reactstrap](https://reactstrap.github.io/). It makes front end API calls with [fetch](https://github.com/github/fetch).
 
 ## Commands
+`npm run start` - Build for development and run the Express server. Code changes will be implemented automatically through hot reloading.
 
 `npm run build` - Use Webpack to build for production.
 
-`npm run start` - Run the Express server via Node.
-
-`npm run dev` - Build for development and run the Express server. Code changes will be implemented automatically through hot reloading.
+`npm run serve` - Run the Express server via Node.
 
 ## Install Instructions
 Node Package Manager (NPM) is used for dependencies. To install the application locally, follow these instructions:

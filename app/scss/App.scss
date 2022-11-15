@@ -1,13 +1,23 @@
 @import url('https://fonts.googleapis.com/css?family=Lato|Raleway:700');
 
 // Selectively import Bootstrap elements
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
 @import "bootstrap/scss/functions";
-@import "bootstrap/scss/variables";
-@import "bootstrap/scss/mixins";
-@import "bootstrap/scss/utilities";
 
-// Layout & components
+// 2. Include any default variable overrides here
+
+// 3. Include remainder of required Bootstrap stylesheets
+@import "bootstrap/scss/variables";
+
+// 4. Include any default map overrides here
+
+// 5. Include remainder of required parts
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
 @import "bootstrap/scss/root";
+
+// 6. Optionally include any other parts as needed
+@import "bootstrap/scss/utilities";
 @import "bootstrap/scss/reboot";
 @import "bootstrap/scss/type";
 @import "bootstrap/scss/images";
@@ -38,12 +48,12 @@
 // @import "bootstrap/scss/spinners";
 // @import "bootstrap/scss/offcanvas";
 // @import "bootstrap/scss/placeholders";
-
-// Helpers
 @import "bootstrap/scss/helpers";
 
-// Utilities
+// 7. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
 @import "bootstrap/scss/utilities/api";
+
+// 8. Add additional custom code here
 
 // Custom Sass styling
 $highlight-color: orange;
