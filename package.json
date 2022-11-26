@@ -7,10 +7,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --config webpack.prod.js",
-    "webpack-start": "webpack-dev-server --open --config webpack.dev.js",
-    "serve": "node server.js",
-    "start": "webpack --config webpack.dev.js && npm run serve",
-    "postinstall": "webpack --config webpack.prod.js"
+    "webpack-dev": "webpack-dev-server --open --config webpack.dev.js",
+    "start": "node server.js",
+    "dev": "webpack --config webpack.dev.js && npm run start",
+    "postinstall": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -26,7 +26,7 @@
   },
   "homepage": "https://github.com/MitulMistry/react-google-news#readme",
   "dependencies": {
-    "bootstrap": "^5.2.2",
+    "bootstrap": "^5.2.3",
     "cors": "^2.8.5",
     "express": "^4.18.2",
     "framer-motion": "^6.5.1",
@@ -51,7 +51,7 @@
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
     "inline-source-map": "^0.6.2",
-    "mini-css-extract-plugin": "^2.6.1",
+    "mini-css-extract-plugin": "^2.7.0",
     "node-sass": "^7.0.3",
     "sass-loader": "^12.6.0",
     "source-map": "^0.7.4",

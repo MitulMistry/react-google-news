@@ -17,11 +17,11 @@ An Express back end is used to make API requests and protect the API key. Routes
 The application implements Bootstrap via [Reactstrap](https://reactstrap.github.io/). It makes front end API calls with [fetch](https://github.com/github/fetch).
 
 ## Commands
-`npm run start` - Build for development and run the Express server. Code changes will be implemented automatically through hot reloading.
+`npm run dev` - Build for development and run the Express server. Code changes will be implemented automatically through hot reloading.
 
 `npm run build` - Use Webpack to build for production.
 
-`npm run serve` - Run the Express server via Node.
+`npm run start` - Run the Express server via Node.
 
 ## Install Instructions
 Node Package Manager (NPM) is used for dependencies. To install the application locally, follow these instructions:
