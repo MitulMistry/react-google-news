@@ -1,0 +1,123 @@
+{
+  "status": "ok",
+  "totalResults": 9,
+  "articles": [
+    {
+      "source": {
+        "id": "google-news",
+        "name": "Google News"
+      },
+      "author": "Chris Megerian",
+      "title": "Biden signs gay marriage law, calls it 'a blow against hate'",
+      "description": "WASHINGTON (AP) — A celebratory crowd of thousands bundled up on a chilly Tuesday afternoon to watch President Joe Biden sign gay marriage legislation  into law, a joyful ceremony that was tempered by the backdrop of an ongoing conservative backlash over gend…",
+      "url": "https://apnews.com/article/biden-politics-marriage-united-states-government-virginia-state-4968ff59107e511609fc3e301890942e",
+      "urlToImage": "https://storage.googleapis.com/afs-prod/media/17c5ddee4c2d404bbad43179909a16c2/3000.webp",
+      "publishedAt": "2022-12-14T03:40:35+00:00",
+      "content": "WASHINGTON (AP) A celebratory crowd of thousands bundled up on a chilly Tuesday afternoon to watch President Joe Biden sign gay marriage legislation into law, a joyful ceremony that was tempered by t… [+5461 chars]"
+    },
+    {
+      "source": {
+        "id": "google-news",
+        "name": "Google News"
+      },
+      "author": "https://www.facebook.com/bbcnews",
+      "title": "US winter storm brings blizzards, tornadoes and flood threats",
+      "description": "\"This one is a little larger than your average winter storm,\" says a meteorologist of the wintry system.",
+      "url": "https://www.bbc.com/news/world-us-canada-63952802",
+      "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/3A64/production/_127984941_gettyimages-1244937915.jpg",
+      "publishedAt": "2022-12-14T02:31:50+00:00",
+      "content": "Media caption, US: More severe weather on the way\r\nA powerful storm has spawned tornadoes in the southern US and brought heavy snowfall and other extreme weather across the US and parts of Canada. \r\n… [+3065 chars]"
+    },
+    {
+      "source": {
+        "id": "google-news",
+        "name": "Google News"
+      },
+      "author": "Fred Pleitgen, Ivana Kottasová",
+      "title": "‘There are maniacs who enjoy killing,’ Russian defector says of his former unit accused of war crimes in Bucha",
+      "description": "Nikita Chibrin says he still remembers his fellow Russian soldiers running away after allegedly raping two Ukrainian women during their deployment northwest of Kyiv in March.",
+      "url": "https://www.cnn.com/2022/12/13/europe/russian-defector-war-crimes-intl-cmd/index.html",
+      "urlToImage": "https://media.cnn.com/api/v1/images/stellar/prod/221213103523-russian-defector-nikita-chibrin.jpg?c=16x9&q=w_800,c_fill",
+      "publishedAt": "2022-12-14T02:09:00+00:00",
+      "content": "Nikita Chibrin says he still remembers his fellow Russian soldiers running away after allegedly raping two Ukrainian women during their deployment northwest of Kyiv in March.\r\nI saw them run, then I … [+8161 chars]"
+    },
+    {
+      "source": {
+        "id": "google-news",
+        "name": "Google News"
+      },
+      "author": "Guardian staff reporter",
+      "title": "Florida governor seeks grand jury investigation into Covid vaccines",
+      "description": "Ron DeSantis asks state supreme court to investigate undefined ‘wrongdoing’ related to vaccinations",
+      "url": "https://www.theguardian.com/us-news/2022/dec/13/ron-desantis-grand-jury-investigation-covid-vaccines-florida",
+      "urlToImage": "https://i.guim.co.uk/img/media/b86d74dba20dbced8a507569d85eb499df964d4a/0_0_3000_1799/master/3000.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=366231b47d8bffcaff18a6b1af08148d",
+      "publishedAt": "2022-12-14T02:06:00+00:00",
+      "content": "The Florida governor, Ron DeSantis, said on Tuesday he will petition the state supreme court to convene a grand jury to investigate any and all wrongdoing with respect to Covid-19 vaccines.\r\nThe Repu… [+2710 chars]"
+    },
+    {
+      "source": {
+        "id": "google-news",
+        "name": "Google News"
+      },
+      "author": null,
+      "title": "Top appropriators clinch deal on government funding framework",
+      "description": "Leading negotiators didn’t release government funding totals in announcing the deal, but appropriators have largely settled on an $858 billion defense budget in recent weeks.",
+      "url": "https://www.politico.com/news/2022/12/13/deal-prevent-jan-6-spending-package-schumer-00073671",
+      "urlToImage": "https://cf-images.us-east-1.prod.boltdns.net/v1/static/1155968404/03cfcac1-8488-4a18-b4a7-b8564559f092/7aaffa25-7936-43d3-8efc-7a5957aba662/1280x720/match/image.jpg",
+      "publishedAt": "2022-12-14T01:14:48+00:00",
+      "content": "The deal followed a burst of progress in previously stalled talks, with domestic funding levels being the major hangup between both parties.\r\nSen. Richard Shelby of Alabama, the GOPs lead negotiator,… [+4024 chars]"
+    },
+    {
+      "source": {
+        "id": "google-news",
+        "name": "Google News"
+      },
+      "author": "Louis Casiano",
+      "title": "Los Angeles Mayor Karen Bass, council unite on city's rampant homeless problem: 'new direction'",
+      "description": "A homeless state of emergency proposed by Los Angeles Mayor Karen Bass was approved by the City Council Tuesday.",
+      "url": "https://www.foxnews.com/us/los-angeles-mayor-karen-bass-council-unite-homeless-problem-new-direction",
+      "urlToImage": "https://static.foxnews.com/foxnews.com/content/uploads/2022/08/AP22215033384825.jpg",
+      "publishedAt": "2022-12-14T00:45:28+00:00",
+      "content": "Los Angeles city leaders on Tuesday unanimously ratified a homeless state of emergency declared by Karen Bass in her first official act as mayor. \r\nThe City Council approved the measure in a 13-0 vot… [+2589 chars]"
+    },
+    {
+      "source": {
+        "id": "google-news",
+        "name": "Google News"
+      },
+      "author": "Bradford Betz",
+      "title": "US official who announced Lockerbie bomb suspect charges calls for death penalty",
+      "description": "Former US Attorney General William Barr is calling for the death penalty against Lockerbie bombing suspect Abu Agila Mohammad Mas’ud Kheir Al-Marimi.",
+      "url": "https://www.foxnews.com/us/us-official-who-announced-lockerbie-bomb-suspect-charges-calls-death-penalty",
+      "urlToImage": "https://static.foxnews.com/foxnews.com/content/uploads/2022/12/GettyImages-1230248506.jpg",
+      "publishedAt": "2022-12-14T00:25:56+00:00",
+      "content": "Former U.S. Attorney General William Barr says the Lockerbie bombing suspect must face the death penalty. \r\nBarr was U.S. Attorney General when he announced charges against Abu Agila Mohammad Masud K… [+2742 chars]"
+    },
+    {
+      "source": {
+        "id": "google-news",
+        "name": "Google News"
+      },
+      "author": "Teddy Grant, Meredith Deliso",
+      "title": "Missing sailors headed to Florida found safe: Coast Guard",
+      "description": "The pair left port at Cape May, New Jersey, on Nov. 27, officials say.",
+      "url": "https://abcnews.go.com/US/coast-guard-searching-missing-sailors-headed-florida/story?id=95151817",
+      "urlToImage": "https://s.abcnews.com/images/US/missing-1-ht-er-221213_1670950465401_hpMain_16x9_992.jpg",
+      "publishedAt": "2022-12-13T23:37:30+00:00",
+      "content": "Two men who went missing more than a week ago while sailing to Florida have been found safe, the U.S. Coast Guard said.\r\nKevin Hyde, 64, and Joe DiTommasso, 76, departed Cape May, New Jersey, late la… [+1195 chars]"
+    },
+    {
+      "source": {
+        "id": "google-news",
+        "name": "Google News"
+      },
+      "author": "John Bacon and Terry Collins, USA TODAY",
+      "title": "7 injured in Texas tornadoes, storms; blizzard warnings issued in 6 states as massive winter storm rocks US",
+      "description": "A massive winter storm roaring across the West prompted blizzard warnings in six states and fueled concerns of possibly severe tornadoes in the South.",
+      "url": "https://www.usatoday.com/story/news/nation/2022/12/13/winter-storm-forecast-updates-blizzard-tornado-warnings/10886597002/",
+      "urlToImage": "https://www.gannett-cdn.com/presto/2022/12/13/USAT/bea7e69b-138b-42c5-9b9f-ba4eb2aa7533-AP_Winter_Weather.jpg?auto=webp&crop=5178,2913,x0,y317&format=pjpg&width=1200",
+      "publishedAt": "2022-12-13T21:51:14+00:00",
+      "content": "A massive winter storm roaring across the West dumped up to 4 feet of snow in parts of Nevada and Idaho, fueled blizzard warnings in six other states and spawned tornadoes that injured several people… [+7159 chars]"
+    }
+  ]
+}
