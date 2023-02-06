@@ -43,12 +43,21 @@ app.get('/', function(req, res) { // request, response
 });
 
 // API ---
+function pipeRequest(req, res, url) {
+  req.pipe(request(url)).pipe(res);
+}
+
 function pipeSourceByTop(req, res, source) {
-  req.pipe(request(newsQuery.sourceByTop(source))).pipe(res);
+  pipeRequest(req, res, newsQuery.sourceByTop(source));
+}
+
+function pipeCountryByTop(req, res, country) {
+  pipeRequest(req, res, newsQuery.countryByTop(country));
 }
 
 app.get('/api/top', cors(), function(req, res) {
-  pipeSourceByTop(req, res, 'google-news');
+  // pipeSourceByTop(req, res, 'google-news');
+  pipeCountryByTop(req, res, 'us');
 });
 
 app.get('/api/arstechnica', cors(), function(req, res) {
